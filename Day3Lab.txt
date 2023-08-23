@@ -1,3 +1,25 @@
+Lab4 - install plugin -> pipeline
+       create new project -> pipeline -> select HelloWorld (add stages) -> run 
+       install plugin -> pipeline
+          blue ocean 
+       run 
+    pipeline {
+        agent any
+    
+        stages {
+            stage('Hello1') {
+                steps {
+                    echo 'Hello World 111'
+                }
+            }
+            stage('Hello2') {
+                steps {
+                    echo 'Hello World222'
+                }
+            }
+        }
+    }
+   run , check pipeline
 Lab3 - create new item - demo3, 
                     source code management - git -
                     https://github.com/Vaishali-Tapaswi/tmprepo
