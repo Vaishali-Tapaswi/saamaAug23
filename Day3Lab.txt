@@ -1,3 +1,15 @@
+Lab3 - create new item - demo3, 
+                    source code management - git -
+                    https://github.com/Vaishali-Tapaswi/tmprepo
+                    branch - main
+        Modify build steps to include        
+          set path="c:\Program Files\Java\jdk1.8.0_05\bin" =====> linux EXPORT PATH=..
+          javac HelloWorld.java
+          java HelloWorld 
+        run -> check result
+          Modify Build Trigger -> Poll SCM  -> poll after every 4 mins
+          Check project status, console logs
+
 Lab2 -  install plugins 
           create item -> demo1
                     select freestyle
