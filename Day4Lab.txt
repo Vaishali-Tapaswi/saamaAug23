@@ -1,4 +1,10 @@
-Lab4 - Create a simple project (Free Style, check HelloWorld python code)
+Lab5 - Python + TestScript
+Lab4 - Plugins
+            Python 1.3
+            ShiningPanda
+            Pyenv Pipeline
+      Confirmation - python 
+      Create a new project -> free style-> build step -> execute python script
 
 Lab3 -  select project, right hand side menu - set next build number - 33
       build, and check build number
