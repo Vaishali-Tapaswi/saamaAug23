@@ -1,4 +1,22 @@
-Lab2 - 
+Lab4 - Create a simple project (Free Style, check HelloWorld python code)
+
+Lab3 -  select project, right hand side menu - set next build number - 33
+      build, and check build number
+Lab2 - Authorization demo
+    Create user1, user2 with passwords
+        Dashboard ->Manage Jenkins ->users -> create user 
+    Dashboard -> Manage Jenkins - security
+        Authorization
+          add user - add admin, user1, user2 all
+          admin -> Administrator rights
+          user1 ->read, job read 
+          user2 -> read, Job - read, workspace, build
+        
+    Open other browser/in cognito -> login with user1, user2 and check permissions
 Lab1 - Install plugins
           python, matrix auth
-        
+          GitHub Authentication plugin
+          JavaMail
+          Matrix Authorization Strategy Plugin
+          Role-based Authorization Strategy
+          Next build number
