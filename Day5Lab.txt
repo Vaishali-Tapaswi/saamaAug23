@@ -1,3 +1,14 @@
+Lab5 - 
+        docker run -it -d --name p1 -p 8080:8080 python:slim-bullseye bash  
+                -it - interactive 
+                -d - detached
+                -p - port mapping (Hostport:containerport)
+        docker cp t1.py p1:/t1.py
+                first create t1.py on linux machine (editor/vi -> https://pythonbasics.org/webserver/)
+        docker exec p1 python /t1.py
+                run the server
+        on top section, click on port number to check output
+                
 Lab4 -  docker images
         docker pull python:slim-bullseye
         docker run -it python:slim-bullseye python
