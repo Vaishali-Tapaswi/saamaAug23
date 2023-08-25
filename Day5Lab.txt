@@ -1,3 +1,4 @@
+Lab6 - create postgres container and use any tool to connect to postgre
 Lab5 - 
         docker run -it -d --name p1 -p 8080:8080 python:slim-bullseye bash  
                 -it - interactive 
