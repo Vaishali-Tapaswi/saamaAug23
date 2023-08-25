@@ -1,3 +1,14 @@
+Lab3 - pull python image, node image
+        create python instance and run script (print("hello world ")
+Lab2 - Get image from DockerHub
+        	pull 
+        list of images
+        	docker images
+        create a container 
+        	docker run hello-world (if image is not available first pull and then create container)
+        list the containers
+        	docker ps  (running)
+        	docker ps -a (all - running+nonrunning)
 Lab1 - https://labs.play-with-docker.com/ 
         connect, login
           check command -> docker ps
