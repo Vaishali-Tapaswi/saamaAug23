@@ -1,3 +1,13 @@
+Lab4 -  docker images
+        docker pull python:slim-bullseye
+        docker run -it python:slim-bullseye python
+        docker run  python:slim-bullseye ls
+        docker images
+        docker pull python:slim-bullseye
+        docker run -it python:slim-bullseye python
+        docker run  python:slim-bullseye ls
+        ----> run either python/node
+
 Lab3 - pull python image, node image
         create python instance and run script (print("hello world ")
 Lab2 - Get image from DockerHub
