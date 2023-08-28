@@ -8,7 +8,7 @@ Lab2 - Login to your dockerhub account
        cmd>docker push username/saamago
        check in docker hub by logging in 
        new terminal -> try pull and create container from the same image
-              docker run -P imagename
+              docker run -P -d imagename
               
 Lab1 - on docker playgroud
        $>mkdir tmp 
