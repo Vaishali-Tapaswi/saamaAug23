@@ -1,0 +1,34 @@
+Lab1 - on docker playgroud
+       $>mkdir tmp 
+       $>cd tmp
+       $>echo "" > dockerfile
+       $>echo "" > demo1.go
+    Using editor modifiy dockerfile to 
+      FROM golang
+      COPY demo1.go ./
+      EXPOSE 8080
+      CMD ["go","run", "./demo1.go"] 
+    Modify demo1.go 
+        package main 
+        import (
+         "net/http"
+         "log"
+         "fmt"
+         )
+         func main() {
+            http.HandleFunc("/hello", func(w http.ResponseWriter, r *http.Request){
+                fmt.Fprintf(w, "<h1>HelloWorld from Go !</h1>")
+            })
+        
+        	
+            fmt.Printf("Starting server at port 8080\n")
+            if err := http.ListenAndServe(":8080", nil); err != nil {
+                log.Fatal(err)
+            }
+        }
+  $ in tmp folder>docker build . -t saamago
+  $ docker images  
+    confirm saamago
+  $ docker run -p 8080:8080 saamago
+  $ docker run -p 8081:8080 saamago
+  run on the both the ports with url/hello
