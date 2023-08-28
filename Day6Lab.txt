@@ -1,3 +1,15 @@
+Lab2 - Login to your dockerhub account
+       account settings - security -> create new access token -> read/write/delete
+       cmd>docker images 
+              show you saamago
+       cmd>docker login username (copy from docker token instructions)
+              password
+       cmd>docker tag saamago username/saamago
+       cmd>docker push username/saamago
+       check in docker hub by logging in 
+       new terminal -> try pull and create container from the same image
+              docker run -P imagename
+              
 Lab1 - on docker playgroud
        $>mkdir tmp 
        $>cd tmp
