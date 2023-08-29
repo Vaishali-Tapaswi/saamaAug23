@@ -1,3 +1,4 @@
+Lab4 - CodeCommit, CodeBuild, CodePipeline-> delete everything
 Lab3 - Create a pipeline(AWS CodePipeline)
         create new pipeline by getting data from demo1(CodeCommit) and invoke build1(CodeBuild)
                 skip deploy stage
