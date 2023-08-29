@@ -1,3 +1,5 @@
+Lab2- Create a project(build1) with CodeBuild to just show list of files in demo1 repo of CodeCommit
+        modify demo1 from codecommit to include a py file and modify build1 to run it.
 Lab1 - Create a repo with CodeCommit.
         Create local repo, add couple of files, push the content to remote repo.
        Send commands on private chat 
