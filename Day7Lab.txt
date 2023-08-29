@@ -1,3 +1,10 @@
+Lab3 - Create a pipeline(AWS CodePipeline)
+        create new pipeline by getting data from demo1(CodeCommit) and invoke build1(CodeBuild)
+                skip deploy stage
+        codepipeline should check changes done to CodeCommit
+        Run pipeline
+        Modify code from demo1(CodeCommit)
+        See pipeline invocation once again.
 Lab2- Create a project(build1) with CodeBuild to just show list of files in demo1 repo of CodeCommit
         modify demo1 from codecommit to include a py file and modify build1 to run it.
 Lab1 - Create a repo with CodeCommit.
