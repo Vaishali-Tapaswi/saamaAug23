@@ -1,3 +1,20 @@
 Lab1 - Create a repo with CodeCommit.
         Create local repo, add couple of files, push the content to remote repo.
        Send commands on private chat 
+
+        mkdir temp2
+        cd temp2
+        echo "aaaa" > aa.txt
+        echo "bbbb" > bb.txt
+        git init
+        git add .
+        git status
+        git commit -m "Initial commit"
+        go to  https://console.aws.amazon.com/iam/ 
+        	>> choose IAM user >> Security Credentials tab, and in HTTPS Git credentials for AWS CodeCommit, choose Generate.
+        it will generate username and pass
+        then push the files to codecommit by using
+                git remote add dev11 {{giturl}}
+                git push dev11
+                        it will ask for username and password
+                        after giving username and password, it will push the files to the codecommit repo
