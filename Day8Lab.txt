@@ -1,0 +1,1 @@
+Lab1 - Observe options for codestart and create a small project to see communication to Github and jira
