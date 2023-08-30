@@ -1,1 +1,24 @@
+Lab 2 - helloWorld Lambda 
+	Console -> Services -> lambda
+		Create Function ->Author from scratch
+			Functio name - demo1
+			Runtime - python 3.11
+			permissions - na
+				Create function
+		Code
+			select lambda_function.py
+				edit file ... at least message
+				Click on deploy
+			Test-> configure test event ->
+					Create a new event
+						name - 
+						json - empty
+						Create
+			Shift from tab "Code" to "Test"
+				Test ->
+		Watch 
+			CloudWatch - logs
+			Roles
+				check policy and service for newly created role
+
 Lab1 - Observe options for codestart and create a small project to see communication to Github and jira
