@@ -1,3 +1,58 @@
+Lab4 -  API gateway
+	Lambda - demo1 - 
+		import json
+
+		def lambda_handler(event, context):
+		    print("Hello from Lambda!")
+		    return {
+			'statusCode': 200,
+			'body': json.dumps('Hello from Lambda!')
+		    }
+	
+	Expose demo1 as API Gateway
+		Console -> Services -> API Gateway
+			Create API -> REST API -> build 
+				Choose the protocol
+					REST
+					Create new API -> new API
+					Setting 	name - demo1
+					Endpoint Type - regional
+				
+				Actions
+					new resource
+						Resource Name - demo1
+						Resource Path - /demo1
+						create resource
+				Actions (on /demo1)
+					create method -> get
+						Integration type - lambda
+						Lambda Region - us-east-1
+						Lambda Function - demo1 (arn)
+						add permission -> ok
+				Deploy
+				Test 
+					Test-> will invoke your lambda function
+				Check
+					AWS cloudwatch
+
+Lab3  - 
+	accept payload
+	create demo2 lambda function
+		import json
+		def lambda_handler(event, context):
+			message = 'Hello {} {}!'.format(event['firstname'], event['lastname'])  
+    			print(event['firstname'])
+    			return { 
+        			'message' : message
+    			}
+	
+	Test it with two 
+			1. Empty json as input 
+			2. {
+ 				 "firstname": "aaa",
+  				 "lastname": "bbb"
+			   }
+    	Invoke lambda function from Console
 Lab 2 - helloWorld Lambda 
 	Console -> Services -> lambda
 		Create Function ->Author from scratch
