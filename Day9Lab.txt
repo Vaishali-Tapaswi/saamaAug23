@@ -1,0 +1,10 @@
+Lab1 - AWS Console -> step functions
+          create  step function -> Create your own -> stepfunction1
+                copy pass(flow tab) between start and end
+                  create -> state machine -> execute
+          create  step function -> Create your own ->stepfunction2
+                copy inokve lambda (action tab) between start and end
+                  choose lambda and select function name, input param etc
+                  create -> state machine -> execute
+          Check logs/view(graphics/table)
+  
