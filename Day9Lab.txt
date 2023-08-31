@@ -1,3 +1,44 @@
+Lab2 - AWS Console - step function for choice
+                    < 50 
+             just implement as two pass (true, false(defualt) 
+          {
+            "Comment": "A description of my state machine",
+            "StartAt": "Pass",
+            "States": {
+              "Pass": {
+                "Type": "Pass",
+                "Result": {
+                  "givennumber": 5
+                },
+                "Next": "Choice"
+              },
+              "Choice": {
+                "Type": "Choice",
+                "Choices": [
+                  {
+                    "Variable": "$.givennumber",
+                    "NumericLessThan": 50,
+                    "Next": "Less50"
+                  }
+                ],
+                "Default": "MoreEq50"
+              },
+              "Less50": {
+                "Type": "Pass",
+                "End": true,
+                "Result": {
+                  "Ans": "Number is less than 50"
+                }
+              },
+              "MoreEq50": {
+                "Type": "Pass",
+                "End": true,
+                "Result": {
+                  "Ans": "Number is Greater than or equal to 50"
+                }
+              }
+            }
+          }        
 Lab1 - AWS Console -> step functions
           create  step function -> Create your own -> stepfunction1
                 copy pass(flow tab) between start and end
