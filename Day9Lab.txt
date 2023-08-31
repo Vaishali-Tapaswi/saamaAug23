@@ -1,3 +1,19 @@
+Lab3 - 
+  Step1 - aws console-> 
+        create mysql database , create emp table, 
+                on pgadmin/mysql
+                    create database test
+                    use test
+                    create table emp (empno numeric(2) primary key, ename varchar(20), salary numeric); 
+
+  Step2 - API Gateway 
+  	Insert a record in dynamodb
+  
+  Step3 - Step function to accept emp details 
+  		(check salary > 100)-> true -> call API Gateway
+  							   false -> no insertion message
+  							   
+
 Lab2 - AWS Console - step function for choice
                     < 50 
              just implement as two pass (true, false(defualt) 
