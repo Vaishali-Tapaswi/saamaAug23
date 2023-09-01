@@ -1,6 +1,24 @@
 Pointers - Developers vs Operators
         aws steps for deployment and configuration - https://docs.aws.amazon.com/lambda/latest/dg/python-handler.html
         https://github.com/awsdocs/
+----------------Input JSON-----------------
+{
+   "patient":{
+      "name":"Abc",
+      "patient_identifier":"1"
+   },
+   "insurance":{
+      "name":"Name of Insurance",
+      "payer_id":123456,
+      "policy_name":"Name of Policy",
+      "policy_information":123456,
+   },
+   "claim": {
+         "claimId":"0210336239290",
+         "charges": 1020
+       }
+}
+----------------------------
 
 Assignment - 
 Asgn1 - Git -> AWS
@@ -12,8 +30,7 @@ Asgn2 - Step Flow
 File is uploaded in s3 bucket -> IssuranceClaim
 	-> a JSON file uploaded 
 	-> Step function should be invoked. 
-		-> store that file in s3 bucket and start the processing
-
+	
 
 Every request first goes to OpenCaseFunction, AssignCaseFunction,  WorkOnCaseFunction, 
   Choice -> 1. Close Case or Escalate Case -> store any entry in database
