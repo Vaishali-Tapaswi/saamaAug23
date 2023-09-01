@@ -1,3 +1,11 @@
+Steps - Human Workflow - CloudFormation
+	Create a flow.yml file (https://docs.aws.amazon.com/step-functions/latest/dg/tutorial-human-approval.html)
+	upload to s3 bucket
+	Cloud Formation ->Read template -> s3 url of flow.yml
+		Create stack
+	Test
+		delete stack
+-----
 Asgn1.doc -> Flow (which you have written, at app places (put the function code)
 Asgn2.doc -> JSON input -> Print screen of CloudWatch / Logs
 			Copy of Step Functions code 
