@@ -4,7 +4,7 @@ Pointers - Developers vs Operators
 
 Assignment - 
 Asgn1 - Git -> AWS
-	as soon as new uploaded on s3 bucket
+	as soon as new file is uploaded on git, create same file in s3 bucket
 	Lambda to Poll github, extract the files in s3 using lambda
 	
 Asgn2 - Step Flow 
