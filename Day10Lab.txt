@@ -1,0 +1,111 @@
+Pointers - Developers vs Operators
+        aws steps for deployment and configuration - https://docs.aws.amazon.com/lambda/latest/dg/python-handler.html
+        https://github.com/awsdocs/
+
+Assignment - 
+Asgn1 - Git -> AWS
+	as soon as new uploaded on s3 bucket
+	Lambda to Poll github, extract the files in s3 using lambda
+	
+Asgn2 - Step Flow 
+-> 
+File is uploaded in s3 bucket -> IssuranceClaim
+	-> a JSON file uploaded 
+	-> Step function should be invoked. 
+		-> store that file in s3 bucket and start the processing
+
+
+Every request first goes to OpenCaseFunction, AssignCaseFunction,  WorkOnCaseFunction, 
+  Choice -> 1. Close Case or Escalate Case -> store any entry in database
+ All defined lambda functions
+ 
+  Write ->"Is Case Resolved": {
+					"Type" : "Choice",
+					"Choices": [ 
+					  {
+						"Variable": "$.Status",
+						"NumericEquals": 1,
+						"Next": "Close Case"
+					  },
+					  {
+						"Variable": "$.Status",
+						"NumericEquals": 0,
+						"Next": "Escalate Case"
+					  }
+				  ]
+	
+--------> input - { "inputCaseID" : "C1" }
+--------> input - { "inputCaseID" : "C11" }
+
+OpenCaseFunction
+----------------------Python-------------------------
+	import json
+	def lambda_handler(event, context):
+	 myCaseID = event['inputCaseID']
+	 myMessage = "Case " + myCaseID + ": opened...";  
+   
+	 
+	 return  {
+	  'Case':myCaseID, 
+	  'Message':myMessage
+	 }
+----------------------/Python-------------------------
+AssignCaseFunction
+----------------------Python-------------------------
+	import json
+	def lambda_handler(event, context):
+	 myCaseID = event['Case']
+	 myMessage = event['Message'] + "assigned...";   
+	 
+	 return  {
+	  'Case':myCaseID, 
+	  'Message':myMessage
+	 }
+----------------------/Python-------------------------
+	
+WorkOnCaseFunction
+----------------------Python-------------------------
+	import json
+	def lambda_handler(event, context):
+	 myCaseID = event['Case']
+	 myMessage = event['Message'] + "assigned..."
+	 myCaseStatus = len(myCaseID) % 2;
+	 if myCaseStatus == 1:
+	  myMessage = myMessage + "resolved..."
+	 else:
+	  myMessage = myMessage + "unresolved..."
+	 return  {
+	  'Case':myCaseID, 
+	  'Status' : myCaseStatus,
+	  'Message':myMessage
+	  }
+----------------------/Python-------------------------
+
+CloseCaseFunction
+----------------------Python-------------------------
+	import json
+	def lambda_handler(event, context):
+	 myCaseID = event['Case']
+	 myMessage = event['Message'] + "Closed..."
+	 myCaseStatus = event['Status']
+	 return  {
+	  'Case':myCaseID, 
+	  'Status' : myCaseStatus,
+	  'Message':myMessage
+	  }
+----------------------/Python-------------------------
+
+EscalateCaseFunction
+----------------------Python-------------------------
+import json
+def lambda_handler(event, context):
+ myCaseID = event['Case']
+ myMessage = event['Message'] + "escalating..."
+ myCaseStatus = event['Status']
+ return  {
+  'Case':myCaseID, 
+  'Status' : myCaseStatus,
+  'Message':myMessage
+  }
+----------------------/Python-------------------------
+
