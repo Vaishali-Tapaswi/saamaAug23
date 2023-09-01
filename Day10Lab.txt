@@ -1,3 +1,8 @@
+Asgn1.doc -> Flow (which you have written, at app places (put the function code)
+Asgn2.doc -> JSON input -> Print screen of CloudWatch / Logs
+			Copy of Step Functions code 
+Zip -> vaishali@fandsindia.com -> your name, 	
+Final Date with email attachments  -> 18th Sept
 Pointers - Developers vs Operators
         aws steps for deployment and configuration - https://docs.aws.amazon.com/lambda/latest/dg/python-handler.html
         https://github.com/awsdocs/
